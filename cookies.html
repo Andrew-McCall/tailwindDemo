@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistant</title>
+    <script defer src="cookies.js"></script>
+</head>
+<body>
+
+    <label for="con"> Cookies (No Date) </label> <br/>
+    <textarea id="con" oninput="event.preventDefault(); cookiesNoDate(event)"></textarea><br/><br/>
+
+    <label for="cod"> Cookies (Dated) </label><br/>
+    <textarea id="cod" oninput="event.preventDefault(); cookiesWithDate(event)"></textarea><br/><br/>
+    
+    <label for="ls"> Local Storage </label><br/>
+    <textarea id="ls" oninput="event.preventDefault(); storageLocal(event)"></textarea><br/><br/>
+    
+    <label for="ss"> Session Storage </label><br/>
+    <textarea id="ss" oninput="event.preventDefault(); storageSession(event)"></textarea><br/><br/>
+
+</body>
+</html>

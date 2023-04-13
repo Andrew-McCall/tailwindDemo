@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Converter</title>
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+    <script defer src="/index.js"></script>
+</head>
+<body class="bg-slate-700">
+    <div class="p-2 w-full bg-slate-600">
+        <h1 class="font-semibold text-4xl p-2">Andrew's Base Converter</h1>
+    </div>  
+
+    <div class="items-center pt-6">
+
+        <div class="bg-stone-200 p-2 w-fit m-auto rounded-md shadow-2xl">
+
+            <h2 class="text-center font-semibold p-1 mb-4 m-1 text-2xl underline underline-offset-1  "> Converter </h2>
+            <form class="grid grid-cols-2 gap-y-1 pb-2" onchange="event.preventDefault(); calculate(event)">
+
+                <label for="numberInput" class="text-center font-semibold"> Denary Number </label>
+                <input id="numberInput"type="number" class="number-input rounded-sm mr-6"/>
+                
+                <label for="numberBase" class="text-center font-semibold"> Base Number </label>
+                <input id="numberBase" type="number" class="number-input rounded-sm mr-6"/>
+
+                <h2 id="output" class="bg-stone-300 w-full h-6 col-span-2 mt-4 mx-auto rounded-md"></h2>
+
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="bottom-0 absolute m-2">Andrew McCall &copy; 2023</footer>
+
+</body>
+</html>
