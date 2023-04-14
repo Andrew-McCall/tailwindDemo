@@ -11,16 +11,16 @@ function reduce (reducer, array, initial) {
     return result
 }
 
-const logEach = (current, whole) => {
+const logEach = (current, result) => {
     console.log(current)
-    return whole
+    return result
 }
 
-const mapBelow2 = (current, whole, i) => {
+const mapBelow2 = (current, result, i) => {
     if (current<2){
-        whole[i] = 2;
+        result[i] = 2;
     }
-    return whole;
+    return result;
 }
 
 const sumAll = (current, result) => result+=current
