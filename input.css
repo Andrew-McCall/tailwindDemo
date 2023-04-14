@@ -8,3 +8,27 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.custom-button {
+  @apply bg-pink-700 text-white rounded-sm p-2 m-2 transition ease-in-out duration-500  motion-reduce:transition-none motion-reduce:hover:transform-none
+}
+
+.custom-button:hover {
+  @apply bg-pink-200 text-black shadow-md scale-110;
+}
+
+.custom-button[selected=true] {
+  @apply bg-pink-400 text-black shadow-md scale-110;
+}
+
+.custom-button-next {
+  @apply bg-purple-800 text-white rounded-sm p-2 m-2 transition ease-in-out duration-500  motion-reduce:transition-none motion-reduce:hover:transform-none
+}
+
+.custom-button-next:hover {
+  @apply bg-purple-300 text-black shadow-md scale-100;
+}
+
+.custom-button-next:disabled {
+  @apply bg-purple-200 text-white rounded-sm p-2 m-2 transition ease-in-out duration-500  motion-reduce:transition-none motion-reduce:hover:transform-none
+}
