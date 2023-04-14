@@ -32,7 +32,19 @@ const filterBelow2 = (current, result)=> {
     return result;
 }
 
+const highest = (current, result) => current > result ? current : result;
+
 reduce(logEach,list1,list1)
 console.log( reduce(mapBelow2, list1,list1) )
 console.log( reduce(sumAll, list1, 0) )
 console.log( reduce(filterBelow2 ,list1, []) )
+
+const mapMultiplyCreator = (n) => {
+    const customeMutliply = (current, result, i) => {
+        result[i] *= n
+        return result;
+    }
+    return customeMutliply
+}
+
+console.log(reduce(sumAll, reduce(filterBelow2, reduce(mapMultiplyCreator(10), list1, list1), []), 0))
