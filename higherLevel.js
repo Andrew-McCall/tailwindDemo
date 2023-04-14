@@ -11,29 +11,28 @@ function reduce (reducer, array, initial) {
     return result
 }
 
-// For Each Console.log
-reduce((current, whole) => {
+const logEach = (current, whole) => {
     console.log(current)
-    return whole;
-},list1,list1)
+    return whole
+}
 
-// Map when below 2 to 2
-console.log(reduce((current, whole, i) => {
+const mapBelow2 = (current, whole, i) => {
     if (current<2){
         whole[i] = 2;
     }
     return whole;
-},list1,list1))
+}
 
-// Sum
-console.log(reduce((current, result)=> {
-    return result += current;
-}, list1, 0))
+const sumAll = (current, result) => result+=current
 
-// Filter when below 2
-console.log(reduce((current, result)=> {
+const filterBelow2 = (current, result)=> {
     if (current>2){
         result.push(current)
     }
     return result;
-},list1, []))
+}
+
+reduce(logEach,list1,list1)
+console.log( reduce(mapBelow2, list1,list1) )
+console.log( reduce(sumAll, list1, 0) )
+console.log( reduce(filterBelow2 ,list1, []) )
